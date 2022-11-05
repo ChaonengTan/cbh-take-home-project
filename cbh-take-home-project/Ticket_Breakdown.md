@@ -22,8 +22,32 @@ function generateReport([allShift]) { pdf }
 
 # Steps for Implementation
 
-1) For every Facility initiated in custom IDs, create a new field for Agents in the Agents table which would store their custom IDs. - Effort: low
-2) Implement function addCustomID that takes in parameters (agentID, customAgentID) to first locate the agent by their existing ID and then append customAgentID to the initiated fiend in the Agent table. - Effort: Medium
-3) Modify getShiftsByFacility to return Agent's customID as part of the allShift list and agentMetadata. - Effort: low
-4) Modify generateReport to output Agent's customID as part of the PDF generation. - Effort: low
-5) Implement user interface to access addCustomID function easily. This could be a page with a filterable list of agents currently working at the facility including their id to input into function addCustomID() easily. - Effort: low
+1) 
+Add customID field in Table
+Effort: low
+Details:
+For every Facility initiated in custom IDs, create a new field for Agents in the Agents table which would store their custom IDs.
+
+2)
+addCustomID function to CRUD database
+Effort: Medium
+Details:
+Implement function addCustomID that takes in parameters (agentID, customAgentID) to first locate the agent by their existing ID and then append customAgentID to the initiated fiend in the Agent table.
+
+3)
+Incorperate customID in getShiftsByFacility function
+Effort: low
+Details:
+Modify getShiftsByFacility to return Agent's customID as part of the allShift list and agentMetadata.
+
+4)
+Add customID in generateReport function
+Effort: low
+Details:
+Modify generateReport to output Agent's customID as part of the PDF generation.
+
+5)
+customID accessibility interface
+Effort: low
+Details:
+Implement user interface to access addCustomID function easily. This could be a page with a filterable list of agents currently working at the facility including their id to input into function addCustomID() easily.
