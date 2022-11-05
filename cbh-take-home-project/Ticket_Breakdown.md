@@ -16,3 +16,14 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+function getShiftsByFacility(facilityID){ [allShift], [agentMetadata] }
+function generateReport([allShift]) { pdf }
+
+# Steps for Implementation
+
+1) For every Facility initiated in custom IDs, create a new field for Agents in the Agents table which would store their custom IDs. - Effort: low
+2) Implement function addCustomID that takes in parameters (agentID, customAgentID) to first locate the agent by their existing ID and then append customAgentID to the initiated fiend in the Agent table. - Effort: Medium
+3) Modify getShiftsByFacility to return Agent's customID as part of the allShift list and agentMetadata. - Effort: low
+4) Modify generateReport to output Agent's customID as part of the PDF generation. - Effort: low
+5) Implement user interface to access addCustomID function easily. This could be a page with a filterable list of agents currently working at the facility including their id to input into function addCustomID() easily. - Effort: low
